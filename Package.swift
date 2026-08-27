@@ -24,13 +24,13 @@ let package = Package(
     .library(name: "GoogleCloudGSuiteAddOnsV1", targets: ["GoogleCloudGSuiteAddOnsV1"])
   ],
   dependencies: [
-    .package(path: "../../generated/google-apps-script-type"),
-    .package(path: "../../generated/google-apps-script-type-calendar"),
-    .package(path: "../../generated/google-apps-script-type-docs"),
-    .package(path: "../../generated/google-apps-script-type-drive"),
-    .package(path: "../../generated/google-apps-script-type-gmail"),
-    .package(path: "../../generated/google-apps-script-type-sheets"),
-    .package(path: "../../generated/google-apps-script-type-slides"),
+    .package(path: "../../generated/swift-google-apps-script-type"),
+    .package(path: "../../generated/swift-google-apps-script-type-calendar"),
+    .package(path: "../../generated/swift-google-apps-script-type-docs"),
+    .package(path: "../../generated/swift-google-apps-script-type-drive"),
+    .package(path: "../../generated/swift-google-apps-script-type-gmail"),
+    .package(path: "../../generated/swift-google-apps-script-type-sheets"),
+    .package(path: "../../generated/swift-google-apps-script-type-slides"),
     .package(path: "../../packages/auth"),
     .package(path: "../../packages/gax"),
     .package(path: "../../packages/wkt"),
@@ -40,13 +40,16 @@ let package = Package(
     .target(
       name: "GoogleCloudGSuiteAddOnsV1",
       dependencies: [
-        .product(name: "GoogleAppsScriptType", package: "google-apps-script-type"),
-        .product(name: "GoogleAppsScriptTypeCalendar", package: "google-apps-script-type-calendar"),
-        .product(name: "GoogleAppsScriptTypeDocs", package: "google-apps-script-type-docs"),
-        .product(name: "GoogleAppsScriptTypeDrive", package: "google-apps-script-type-drive"),
-        .product(name: "GoogleAppsScriptTypeGmail", package: "google-apps-script-type-gmail"),
-        .product(name: "GoogleAppsScriptTypeSheets", package: "google-apps-script-type-sheets"),
-        .product(name: "GoogleAppsScriptTypeSlides", package: "google-apps-script-type-slides"),
+        .product(name: "GoogleAppsScriptType", package: "swift-google-apps-script-type"),
+        .product(
+          name: "GoogleAppsScriptTypeCalendar", package: "swift-google-apps-script-type-calendar"),
+        .product(name: "GoogleAppsScriptTypeDocs", package: "swift-google-apps-script-type-docs"),
+        .product(name: "GoogleAppsScriptTypeDrive", package: "swift-google-apps-script-type-drive"),
+        .product(name: "GoogleAppsScriptTypeGmail", package: "swift-google-apps-script-type-gmail"),
+        .product(
+          name: "GoogleAppsScriptTypeSheets", package: "swift-google-apps-script-type-sheets"),
+        .product(
+          name: "GoogleAppsScriptTypeSlides", package: "swift-google-apps-script-type-slides"),
         .product(name: "GoogleCloudAuth", package: "auth"),
         .product(name: "GoogleCloudGax", package: "gax"),
         .product(name: "GoogleCloudWKT", package: "wkt"),
